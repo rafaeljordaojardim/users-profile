@@ -13,8 +13,8 @@ export class SignInController implements IController {
   public async handle (req: Request, res: Response): Promise<IResponse> {
     try {
       const { email, password } = req.body
-      const token = await this.signIn.login(email, password)
-      return ok({ token })
+      const info = await this.signIn.login(email, password)
+      return ok({ info })
     } catch (error) {
       console.error(`Error signing in user: ${String(error)}`)
       return errorProcessor(error)

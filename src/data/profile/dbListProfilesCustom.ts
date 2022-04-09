@@ -22,7 +22,6 @@ export class DBListProfilesCustom implements IGetProfilesCustom {
         this.getUsersFromProfile.getUsersFromProfile(profile.id),
         this.getActionsFromProfile.getActionsFromProfile(profile.id)
       ])
-      console.log(JSON.stringify(usersFromProfile))
       const users = usersFromProfile.map((user) => user.name)
       const actions = actionsProfile.map((action) => action.actionName)
       customResponse.push({
