@@ -1,64 +1,64 @@
 import { IResponse } from '../interfaces/response'
 
-export const ok = (body?: any): IResponse => {
+export const ok = (data?: any): IResponse => {
   return {
     status: 200,
-    body
+    data
   }
 }
 
-export const created = (body?: any): IResponse => {
+export const created = (data?: any): IResponse => {
   return {
     status: 201,
-    body
+    data
   }
 }
 
-export const forbidden = (body?: any): IResponse => {
+export const forbidden = (data?: any): IResponse => {
   return {
     status: 403,
-    body
+    data
   }
 }
 
-export const unauthorized = (body?: any): IResponse => {
+export const unauthorized = (data?: any): IResponse => {
   return {
     status: 401,
-    body
+    data
   }
 }
 
 export const serverError = (): IResponse => {
   return {
     status: 500,
-    body: { message: 'Server Error' }
+    data: { message: 'Server Error' }
   }
 }
 
 export const badRequest = (message?: string): IResponse => {
   return {
     status: 400,
-    body: { message }
+    data: { message }
   }
 }
 
 export const notFound = (message?: string): IResponse => {
   return {
     status: 404,
-    body: { message }
+    data: { message }
   }
 }
 
 export const noContent = (message?: string): IResponse => {
   return {
     status: 204,
-    body: { message }
+    data: { message }
   }
 }
 
 export const conflict = (message?: string): IResponse => {
   return {
     status: 409,
-    body: { message }
+    data: { message }
   }
 }
